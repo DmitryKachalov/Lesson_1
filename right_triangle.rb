@@ -6,14 +6,16 @@ puts "Введите длину сторны C "
 side_c = gets.chomp.to_f
 
 max_side = [side_a,side_b,side_c].sort
-cathet_1 = max_side.first
-cathet_2 = max_side.fetch(1)
-hypotenuse = max_side.last
+side_a = max_side.first
+side_b = max_side.fetch(1)
+side_c = max_side.last
 
-if (cathet_1**2 + cathet_2**2) == hypotenuse**2
+if (side_a**2 + side_b**2) == side_c**2
   p "Треугольник прямоугольный"
-elsif cathet_1 == cathet_2 && cathet_1 == hypotenuse
-  p "Треугольник равнобедренный и равносторонний"
-else
+elsif side_a == side_b && side_a == side_c
+  p "Треугольник равносторонний"
+elsif side_a == side_b || side_a == side_c || side_b == side_c
   p "Треугольник равнобедренный"
+else
+  p "Треугольник разносторонний"
 end
