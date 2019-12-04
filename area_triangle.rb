@@ -1,7 +1,7 @@
 puts "Введите основание "
-a = gets.chomp.to_f
+base = gets.chomp.to_f
 puts "Введите высоту "
-h = gets.chomp.to_f
+height = gets.chomp.to_f
 
-s = Rational(1, 2)*a*h
+s = 0.5 * base * height
 p "Площадь треугольника = #{s}"
